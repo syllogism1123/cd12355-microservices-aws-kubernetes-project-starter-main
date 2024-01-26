@@ -55,5 +55,5 @@ spec:
               name: db-secret
               key: DB_PASSWORD
         - name: DB_HOST
-          value: app-db
+          value: postgres-db-postgresql.default.svc.cluster.local
       restartPolicy: Always

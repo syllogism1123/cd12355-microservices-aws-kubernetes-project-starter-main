@@ -1,46 +1,46 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: admin-api
+  name: coworking-api
 spec:
   selector:
-    app.kubernetes.io/name: admin-api
+    app.kubernetes.io/name: coworking-api
   ports:
-  - name: "5151"
+  - name: "5153"
     protocol: TCP
-    port: 5151
-    targetPort: 5151
+    port: 5153
+    targetPort: 5153
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: admin-api
+  name: coworking-api
   labels:
-    name: admin-api
+    name: coworking-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: admin-api
+      service: coworking-api
   template:
     metadata:
       labels:
-        service: admin-api
+        service: coworking-api
     spec:
       containers:
-      - name: admin-api
-        image: isjustintime/cd12355-admin-api:0.1.0
+      - name: coworking-api
+        image: 985294037487.dkr.ecr.us-east-1.amazonaws.com/coworking-app:0.0.1
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
             path: /health_check
-            port: 5151
+            port: 5153
           initialDelaySeconds: 5
           timeoutSeconds: 2
         readinessProbe:
           httpGet:
             path: "/readiness_check"
-            port: 5151
+            port: 5153
           initialDelaySeconds: 5
           timeoutSeconds: 5
         env:

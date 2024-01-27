@@ -102,6 +102,7 @@ psql < 2_seed_users.sql
 psql < 3_seed_tokens.sql
 ```
 
+
 ### 2. Running the Analytics Application Locally
 
 In the `analytics/` directory:
@@ -182,7 +183,7 @@ curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-i
 1.Configure Memory and CPU allocation in the Kubernetes deployment
 
 - I can set resource requests and limits in the containers section of my Deployment YAML to help
-- Kubernetes scheduler allocate appropriate resources for each Pod.
+  Kubernetes scheduler allocate appropriate resources for each Pod.
 
 2.Recommended AWS Instance Type: t3.medium
 

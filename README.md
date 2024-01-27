@@ -146,7 +146,7 @@ file and sourcing them in a terminal session.
   `curl <BASE_URL>/api/reports/user_visits`
 
 #### Run Analytics application on AWS EKS
-1. Create deployment files: [analytics deployment file](deployment/coworking-api.yaml), [database environment file](deployment/db-configmap.yml) and [database secret deployment file](deployment/db-secret.yaml).
+1. Create deployment files: [analytics deployment file](deployment/coworking-api.yaml), [database environment file](deployment/configmap.yaml) and [database secret deployment file](deployment/db-secret.yaml).
 
 * In the analytics deployment file, the image is from AWS ECR repository.
 * In the database environment file, database host is IP of Node Group.

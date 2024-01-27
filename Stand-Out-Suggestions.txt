@@ -15,3 +15,4 @@ Cost-Saving Tips:
 - Utilize AWS Spot Instances for non-critical tasks to take advantage of cost savings.
 - Implement auto-scaling policies to dynamically adjust resources based on demand.
 - Regularly monitor and optimize storage usage to control costs efficiently.
+-
